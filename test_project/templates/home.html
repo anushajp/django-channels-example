@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block scripts %}
+    <script src="/static/js/chat.js"></script>
+{% endblock %}
+{% block content %}
+    <div>
+        {% if request.user.is_authenticated %}
+            <div class="chat-container">
+                <div>
+                    <textarea id="message" class="message-text"></textarea>
+                    <button id="send" class="button-a send-but">Send</button>
+                 </div>
+                <input type="hidden" id="username" value="{{ request.user }}">
+                {% for chat in chats %}
+                    <div class="chat-message">
+                        {{ chat.message }}
+                        <span class="message-by"> - {{ chat.from_user }}</span>
+                    </div>
+                {% endfor %}
+
+
+
+            </div>
+            <div class="user-container">
+                <!--<div class="chat-message">-->
+                    <!--<span class="message-by"></span>-->
+
+                <!--</div>-->
+            </div>
+        {% else %}
+            <span class="sub-heading">Login</span>
+            <form method="post" action="/login/">{% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="button-a" value="Login">
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}

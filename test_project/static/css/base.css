@@ -1,0 +1,155 @@
+.head-container{
+    width: 100%;
+    height: 63px;
+    background-color: #00A0D4;
+    color: #fff;
+    padding: 15px;
+}
+.login-container{
+    height:220px;
+}
+.signup-container{
+
+
+}
+.small-box{
+    text-align:center;
+    width:40%;
+    margin-left:30%;
+    border:1px solid gray;
+    margin-top:70px;
+    height:auto;
+    padding:20px;
+}
+
+
+.input-text-box{
+    width: 210px;
+    height: 28px;
+}
+
+.sub-heading{
+       color: #00A0D4;
+    font-weight: 600;
+    /* margin-top: 1%; */
+    font-size: x-large;
+}
+.button-a{
+    background-color: #00A0D4;
+    width: 80px;
+    height: 30px;
+    border: none;
+    outline:none;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.heading{
+    font-size: -webkit-xxx-large;
+}
+
+.links{
+    text-decoration:none;
+    color:#00A0D4;
+}
+
+.links:hover {
+    text-decoration: underline;
+}
+
+.link1{
+    text-decoration: none;
+    color: #fff;
+    float: right;
+    margin-top: 25px;
+    /* margin-left: 25px; */
+    margin-right: 40px;
+    font-size: larger;
+}
+.link1:hover {
+    text-decoration: underline;
+}
+
+.signup-link{
+    float:left;
+    margin-left:25%;
+}
+.forgot-link{
+    margin-left:20%;
+}
+
+.errorlist{
+    color:red;
+    font-size:small;
+}
+.logout{
+    height:100%;
+    width:50%;
+    float:right;
+}
+
+.user_icon{
+    width:70px;
+    float:right;
+}
+
+.message-to{
+    width:80%;
+    background-color: #E1F6FB;
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid #9FDDF4;
+    float:right;
+    height:auto;
+}
+.message-me{
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    width:80%;
+    margin-top: 30px;
+    height:auto;
+    background-color:#fff;
+}
+.message-container{
+    width:70%;
+    margin-left:14%;
+    /*background-color:#F9FDFF;
+    background-repeat: repeat;*/
+}
+
+/* chat page css */
+
+.chat-container{
+    width: 70%;
+    border-right: 1px solid #cccccc;
+    height: auto;
+    padding: 2%;
+}
+
+.message-text{
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    width:80%;
+
+    height:auto;
+    background-color:#fff;
+
+}
+
+.send-but{
+    margin-left: 1px;
+    margin-top: 10px;
+    float:right;
+}
+
+.chat-message{
+    margin-top:10px;
+    border-top:1px solid #cccccc;
+    padding:10px;
+}
+.message-by{
+    color:#3d3d3d;
+}
