@@ -12,14 +12,24 @@ $(function() {
     socket.onmessage = function(message)
     {
         // Decode the JSON
-        console.log("Got message ");
+        console.log("Got message "+ message);
         var data = JSON.parse(message.data);
-        var from_user = data.from_user;
-        var message = data.message;
-        var newdiv = $("<div class='chat-message'>"+message+"<span class='message-by'> - "+from_user+"</span></div>");
+        if(data.group == "new_user")
+        {
+            var username = data.user;
+            console.log("new user");
+            $(".username:last").after("<br><span class='username'>"+username+"</span>");
+        }
+        if(data.group == "new_chat")
+        {
+            var from_user = data.from_user;
+            var message = data.message;
+            var newdiv = $("<div class='chat-message'>"+message+"<span class='message-by'> - "+from_user+"</span></div>");
 
-        $(".chat-message:first").before(newdiv);
+            $(".chat-message:first").before(newdiv);
+        }
     };
+
     $("#send").click(function(){
         var msg = $("#message").val()
         var user = $("#username").val()

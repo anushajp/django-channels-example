@@ -33,6 +33,7 @@ def ws_message(message):
 def connect_chathome(message):
     print("connected")
     Group("new_chat").add(message.reply_channel)
+    Group("new_user").add(message.reply_channel)
 
 
 def disconnect_chathome(message):

@@ -5,6 +5,12 @@
 {% block content %}
     <div>
         {% if request.user.is_authenticated %}
+            <div class="user-container">
+                <h3>All Users</h3>
+                {% for user in all_users %}
+                    <span class="username">{{ user }}</span><br>
+                {% endfor %}
+            </div>
             <div class="chat-container">
                 <div>
                     <textarea id="message" class="message-text"></textarea>
@@ -17,16 +23,8 @@
                         <span class="message-by"> - {{ chat.from_user }}</span>
                     </div>
                 {% endfor %}
-
-
-
             </div>
-            <div class="user-container">
-                <!--<div class="chat-message">-->
-                    <!--<span class="message-by"></span>-->
 
-                <!--</div>-->
-            </div>
         {% else %}
             <span class="sub-heading">Login</span>
             <form method="post" action="/login/">{% csrf_token %}

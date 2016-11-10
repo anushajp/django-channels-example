@@ -11,6 +11,7 @@ from .forms import LoginForm
 def home(request):
     form = LoginForm()
     chats = Chat.objects.all().order_by('created_on').reverse
+    all_users = User.objects.filter(is_staff=False).exclude(username=request.user.username)
     return render(request, "home.html",locals())
 
 

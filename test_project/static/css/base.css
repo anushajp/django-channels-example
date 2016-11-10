@@ -126,6 +126,7 @@
     border-right: 1px solid #cccccc;
     height: auto;
     padding: 2%;
+    float:left;
 }
 
 .message-text{
@@ -152,4 +153,10 @@
 }
 .message-by{
     color:#3d3d3d;
+}
+
+.user-container{
+    width: 20%;
+    float: right;
+    padding: 2%;
 }
